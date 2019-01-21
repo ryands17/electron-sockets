@@ -169,7 +169,7 @@ module.exports = app;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ryan.dsouza/Desktop/temp/electron-sockets/server/src/index.js */"./src/index.js");
+module.exports = __webpack_require__(/*! /home/ryan/Desktop/projects/electron-sockets/server/src/index.js */"./src/index.js");
 
 
 /***/ }),

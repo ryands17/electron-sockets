@@ -2,9 +2,9 @@
   "name": "electron-sockets",
   "version": "1.0.0",
   "author": "Ryan Dsouza",
+  "description": "An Electron app (React) connected to a Node Backend (Backpack) and SocketIO",
   "main": "main/electron.js",
   "homepage": "./",
-  "private": true,
   "dependencies": {
     "@loadable/component": "^5.2.2",
     "electron": "^4.0.1",
@@ -19,7 +19,7 @@
     "start": "react-app-rewired start",
     "electron-dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "rimraf dist build && npm run build",
-    "electron-pack": "electron-builder build -m",
+    "electron-pack": "electron-builder build -l",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
