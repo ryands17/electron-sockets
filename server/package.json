@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "backpack dev",
-    "build": "backpack build"
+    "build": "backpack build",
+    "start": "node build/main.js"
   },
   "keywords": [],
   "author": "Ryan Dsouza",

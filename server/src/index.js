@@ -1,16 +1,17 @@
 require('dotenv').config()
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 const { getRandomSentence } = require('./api/sentences')
 
 const PORT = parseInt(process.env.PORT, 10) || 4000
 
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
-
 io.set('origins', '*:*')
 app.use(require('cors')({ origin: process.env.CLIENT_ORIGIN }))
 app.use(require('helmet')())
+__DEV__ ? app.use(morgan('dev')) : app.use(morgan('common'))
 
 server.listen(PORT, () =>
   console.log(`App running on port http://localhost:${PORT}`)

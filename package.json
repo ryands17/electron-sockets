@@ -50,7 +50,10 @@
     }
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "globals": {
+      "__DEV__": true
+    }
   },
   "prettier": {
     "semi": false,

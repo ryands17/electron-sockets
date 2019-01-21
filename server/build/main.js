@@ -120,23 +120,25 @@ __webpack_require__(/*! dotenv */ "dotenv").config();
 
 const express = __webpack_require__(/*! express */ "express");
 
+const morgan = __webpack_require__(/*! morgan */ "morgan");
+
 const app = express();
+
+const server = __webpack_require__(/*! http */ "http").Server(app);
+
+const io = __webpack_require__(/*! socket.io */ "socket.io")(server);
 
 const {
   getRandomSentence
 } = __webpack_require__(/*! ./api/sentences */ "./src/api/sentences.js");
 
 const PORT = parseInt(process.env.PORT, 10) || 4000;
-
-const server = __webpack_require__(/*! http */ "http").Server(app);
-
-const io = __webpack_require__(/*! socket.io */ "socket.io")(server);
-
 io.set('origins', '*:*');
 app.use(__webpack_require__(/*! cors */ "cors")({
   origin: process.env.CLIENT_ORIGIN
 }));
 app.use(__webpack_require__(/*! helmet */ "helmet")());
+ true ? app.use(morgan('dev')) : undefined;
 server.listen(PORT, () => console.log(`App running on port http://localhost:${PORT}`));
 app.get('/', (_, res) => {
   res.send('App live!');
@@ -224,6 +226,17 @@ module.exports = require("helmet");
 /***/ (function(module, exports) {
 
 module.exports = require("http");
+
+/***/ }),
+
+/***/ "morgan":
+/*!*************************!*\
+  !*** external "morgan" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("morgan");
 
 /***/ }),
 
