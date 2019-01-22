@@ -1,11 +1,11 @@
-require('dotenv').config()
-const express = require('express')
-const morgan = require('morgan')
+import './utils'
+import express from 'express'
+import morgan from 'morgan'
+import { getRandomSentence } from './api/sentences'
+
 const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
-const { getRandomSentence } = require('./api/sentences')
-
 const PORT = parseInt(process.env.PORT, 10) || 4000
 
 io.set('origins', '*:*')
@@ -37,4 +37,4 @@ io.on('connection', socket => {
   })
 })
 
-module.exports = app
+export default app
