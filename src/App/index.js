@@ -24,6 +24,7 @@ function App() {
     socket.on('sentence', sentence => {
       setSentence(sentence)
     })
+    return () => socket.off('sentence')
   }, [])
 
   return (
