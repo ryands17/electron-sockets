@@ -24,6 +24,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
     "dotenv": "^6.2.0",
     "morgan": "^1.9.1"
   }
