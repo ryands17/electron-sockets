@@ -61,7 +61,7 @@
     "trailingComma": "es5"
   },
   "browserslist": [
-    ">0.1%"
+    "chrome 69"
   ],
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
