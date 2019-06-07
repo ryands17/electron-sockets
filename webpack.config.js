@@ -32,4 +32,9 @@ module.exports = {
       ...dotenv.config().parsed,
     }),
   ],
+
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
 }

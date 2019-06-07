@@ -15,4 +15,5 @@ public/electron.js*
 
 # production
 /build
+/dist
 server/build
