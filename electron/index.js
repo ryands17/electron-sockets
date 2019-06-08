@@ -1,11 +1,11 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
-const url = require('url')
-const isDev = require('electron-is-dev')
+import { app, BrowserWindow } from 'electron'
+import path from 'path'
+import url from 'url'
+import isDev from 'electron-is-dev'
 
 let mainWindow
 
-function createWindow() {
+const createWindow = () => {
   // let screenElectron = electron.screen;
   // let mainScreen = screenElectron.getPrimaryDisplay();
   // let dimensions = mainScreen.size;

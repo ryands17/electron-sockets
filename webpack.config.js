@@ -26,6 +26,21 @@ module.exports = {
 
   externals: [nodeExternals()],
 
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
+        },
+      },
+    ],
+  },
+
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: JSON.stringify(mode),

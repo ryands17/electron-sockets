@@ -25,7 +25,7 @@ function App() {
       setSentence(sentence)
     })
     return () => socket.off('sentence')
-  }, [])
+  }, [socket])
 
   return (
     <div css="text-align: center;">
