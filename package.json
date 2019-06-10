@@ -71,6 +71,7 @@
     "cross-env": "^5.2.0",
     "customize-cra": "^0.2.9",
     "dotenv": "^8.0.0",
+    "dotenv-expand": "^5.1.0",
     "electron": "^5.0.3",
     "electron-builder": "^20.38.5",
     "husky": "^2.3.0",

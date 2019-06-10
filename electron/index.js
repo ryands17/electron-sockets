@@ -22,7 +22,7 @@ const createWindow = () => {
   mainWindow.setMinimumSize(1364, 768)
   mainWindow.loadURL(
     isDev
-      ? 'http://localhost:3000'
+      ? process.env.NODE_APP_ELECTRON_UI_ENDPOINT
       : url.format({
           pathname: path.join(__dirname, './index.html'),
           protocol: 'file:',
