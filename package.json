@@ -72,7 +72,7 @@
     "customize-cra": "^0.2.9",
     "dotenv": "^8.0.0",
     "dotenv-expand": "^5.1.0",
-    "electron": "^7.2.4",
+    "electron": "^9.4.0",
     "electron-builder": "^20.38.5",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
